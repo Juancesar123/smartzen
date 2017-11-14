@@ -1,0 +1,42 @@
+ <!-- Content Header (Page header) -->
+ <section class="content-header">
+    <h1>
+      User
+      <small>User Management</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Dashboard</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <!-- Small boxes (Stat box) -->
+   
+        <div class="box box-primary">
+            <div class="box-header">
+             
+            </div>
+            <div class="box-body">
+                <table class="table bordered-stripped">
+                    <thead>
+                      <tr>
+                        <th>Nama</th>
+                        <th>Status</th>
+                        <th>Level</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let item of datausers">
+                            <td>{{item.nama}}</td>
+                            <td>{{item.status}}</td>
+                            <td>{{item.level}}</td>
+                            <td><button class="btn btn-success" (click)="clickacc()"><i class="fa fa-checklist"></i> Approve</button> <button class="btn btn-danger" (click)="clickacc()"><i class="fa fa-times"></i> Disapprove</button></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+  </section>
