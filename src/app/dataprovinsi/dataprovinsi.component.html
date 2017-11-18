@@ -1,41 +1,80 @@
  <!-- Content Header (Page header) -->
  <section class="content-header">
     <h1>
-      User
-      <small>User Management</small>
+      Data Provinsi
+      <small>Master Data Provinsi</small>
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active">Dashboard</li>
+      <li><a href="#"><i class="fa fa-database"></i> Master Data</a></li>
+      <li class="active">Data Provinsi</li>
     </ol>
   </section>
 
   <!-- Main content -->
   <section class="content">
     <!-- Small boxes (Stat box) -->
-   
         <div class="box box-primary">
             <div class="box-header">
-             
+              <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Tambah data</button>
             </div>
             <div class="box-body">
-                <table class="table bordered-stripped">
-                    <thead>
-                      <tr>
-                        <th>Nama</th>
-                        <th>Status</th>
-                        <th>Level</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor = "let item of datausers">
-                            <td>{{item.nama}}</td>
-                            <td>{{item.status}}</td>
-                            <td>{{item.level}}</td>
-                            <td><button class="btn btn-success" (click)="clickacc()"><i class="fa fa-checklist"></i> Approve</button> <button class="btn btn-danger" (click)="clickacc()"><i class="fa fa-times"></i> Disapprove</button></td>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+        
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Input Data Provinsi</h4>
+                        </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Nama Provinsi</label>
+                                    <input type="text"  class="form-control"  [(ngModel)]="namaprovinsi">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button class="btn btn-primary" (click)="simpan()"><i class="fa fa-send"></i>Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div id="myModal1" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+            
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Ubah Data Provinsi</h4>
+                            </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Nama Provinsi</label>
+                                        <input type="text"  class="form-control" [(ngModel)]="namaprovinsi">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    <button class="btn btn-primary" (click)="ubahdata()"><i class="fa fa-send"></i>Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  <table class="table bordered-stripped">
+                      <thead>
+                        <tr>
+                          <th>Nama Povinsi</th>
+                          <th>Action</th>
                         </tr>
-                    </tbody>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor = "let item of dataprovinsi">
+                              <td>{{item.namaprovinsi}}</td>
+                              <td><button class="btn btn-success" (click)="edit(item)" data-toggle="modal" data-target="#myModal1"><i class="fa fa-edit"></i> Edit</button> <button class="btn btn-danger" (click)="hapusdata(item)"><i class="fa fa-trash"></i> Hapus</button></td>
+                          </tr>
+                      </tbody>
                   </table>
             </div>
         </div>

@@ -13,7 +13,7 @@ datausers;
   constructor(public userService: UserServiceService) { }
 
   ngOnInit() {
-    this.userService.getdata().subscribe((result) =>this.datausers = result.data);
+    this.userService.getdata().subscribe((result) =>this.datausers = result);
   }
 
 }
