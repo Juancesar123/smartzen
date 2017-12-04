@@ -17,12 +17,13 @@ id;
     this.getdata();
   }
   getdata(){
-    return this.dataprovinsiservice.getdata().subscribe((result)=>this.dataprovinsi = result.data);    
+    return this.dataprovinsiservice.getdata().subscribe((result)=>this.dataprovinsi = result );    
   }
   simpan(){
     let data = {"namaprovinsi":this.namaprovinsi};
     this.dataprovinsiservice.simpandata(data).subscribe(val =>{
-        alert("data sukes di input");
+        alert("data sukes di simpan");
+        this.getdata();
     })
   }
   ubahdata(item){
