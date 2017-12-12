@@ -1,100 +1,99 @@
-
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- Sidebar user panel -->
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
-        <li  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a  routerLink="/home" >
-              <i class="fa fa-home"></i> <span>Home</span>
-            </a>
-          </li>
-        <li class="treeview">
+      <div class="pull-left info">
+        <p>Alexander Pierce</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <!-- search form -->
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+      </div>
+    </form>
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="header">MAIN NAVIGATION</li>
+      <li  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a  routerLink="/home" >
+            <i class="fa fa-home"></i> <span>Home</span>
+          </a>
+        </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-database"></i> <span>Master Data</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dataprovinsi" ><i class="fa fa-circle-o"></i> Data Provinsi</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakota"><i class="fa fa-circle-o"></i>Data Kota</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakecamatan"><i class="fa fa-circle-o"></i>Data Kecamatan</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakelurahan"><i class="fa fa-circle-o"></i>Data Kelurahan</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datarw"><i class="fa fa-circle-o"></i>Data RW</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datart"><i class="fa fa-circle-o"></i>Data RT</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datawarga"><i class="fa fa-circle-o"></i>Data Warga</a></li>
+        </ul>
+      </li>
+      <li class="treeview">
           <a href="#">
-            <i class="fa fa-database"></i> <span>Master Data</span>
+            <i class="fa fa-book"></i> <span>Laporan Kas</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dataprovinsi" ><i class="fa fa-circle-o"></i> Data Provinsi</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakota"><i class="fa fa-circle-o"></i>Data Kota</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakecamatan"><i class="fa fa-circle-o"></i>Data Kecamatan</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakelurahan"><i class="fa fa-circle-o"></i>Data Kelurahan</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datarw"><i class="fa fa-circle-o"></i>Data RW</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datart"><i class="fa fa-circle-o"></i>Data RT</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datawarga"><i class="fa fa-circle-o"></i>Data Warga</a></li>
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dataprovinsi" ><i class="fa fa-circle-o"></i> Laporan Kas Masuk</a></li>
+            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakota"><i class="fa fa-circle-o"></i>Laporan Kas Keluar</a></li>
           </ul>
         </li>
-        <li class="treeview">
-            <a href="#">
-              <i class="fa fa-book"></i> <span>Laporan Kas</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dataprovinsi" ><i class="fa fa-circle-o"></i> Laporan Kas Masuk</a></li>
-              <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakota"><i class="fa fa-circle-o"></i>Laporan Kas Keluar</a></li>
-            </ul>
-          </li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-            <a routerLink="/users" >
-              <i class="fa fa-users"></i><span>Users</span>
-            </a>
-        </li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a routerLink="/laporanwarga" >
-            <i class="fa fa-users"></i><span>Laporan Warga</span>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a routerLink="/users" >
+            <i class="fa fa-users"></i><span>Users</span>
           </a>
-        </li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a routerLink="/keluhanwarga" >
-            <i class="fa fa-folder-open"></i><span>Keluhan Warga</span>
-          </a>
-        </li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-          <a routerLink="/beritaacara" >
-            <i class="fa fa-bullhorn"></i><span>Berita Acara</span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-wifi"></i> <span>Perangkat Keras</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dataprovinsi" ><i class="fa fa-circle-o"></i> CCTV</a></li>
-            <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakota"><i class="fa fa-circle-o"></i>Lampu Jalan</a></li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a routerLink="/laporanwarga" >
+          <i class="fa fa-users"></i><span>Laporan Warga</span>
+        </a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a routerLink="/keluhanwarga" >
+          <i class="fa fa-folder-open"></i><span>Keluhan Warga</span>
+        </a>
+      </li>
+      <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a routerLink="/beritaacara" >
+          <i class="fa fa-bullhorn"></i><span>Berita Acara</span>
+        </a>
+      </li>
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-wifi"></i> <span>Perangkat Keras</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/dataprovinsi" ><i class="fa fa-circle-o"></i> CCTV</a></li>
+          <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/datakota"><i class="fa fa-circle-o"></i>Lampu Jalan</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>
 

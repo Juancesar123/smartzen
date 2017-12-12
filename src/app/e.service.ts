@@ -8,18 +8,18 @@ export class EService {
   constructor(public http: HttpClient) {
    
    }
-   getdata (){
+   GetData (){
     return this.http.get('http://localhost:3030/dataprovinsi');
   }
-  simpandata(data){
+  SaveData(data){
     //let body = JSON.stringify(data);
     return this.http.post('http://localhost:3030/dataprovinsi',data);
   }
-  ubahdata(data,id){
+  UpdateData(data,id){
     //let body = JSON.stringify(data);
     return this.http.patch('http://localhost:3030/dataprovinsi/'+id,data);
   }
-  hapusdata(id){
+  DeleteData(id){
     return this.http.delete('http://localhost:3030/dataprovinsi/'+id);
   }
 }

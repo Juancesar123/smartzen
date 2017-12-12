@@ -17,31 +17,31 @@ id;
     this.getdata();
   }
   getdata(){
-    return this.dataprovinsiservice.getdata().subscribe((result)=>this.dataprovinsi = result );    
+    return this.dataprovinsiservice.GetData().subscribe((result)=>this.dataprovinsi = result );    
   }
-  simpan(){
+  ButtonSaveData(){
     let data = {"namaprovinsi":this.namaprovinsi};
-    this.dataprovinsiservice.simpandata(data).subscribe(val =>{
+    this.dataprovinsiservice.SaveData(data).subscribe(val =>{
         alert("data sukes di simpan");
         this.getdata();
     })
   }
-  ubahdata(item){
+  ButtonUpdateData(item){
     let data = {"namaprovinsi":this.namaprovinsi};
     let id = this.id;
-    this.dataprovinsiservice.ubahdata(data,id).subscribe(val =>{
+    this.dataprovinsiservice.UpdateData(data,id).subscribe(val =>{
         alert('data sukses di ubah')
         this.getdata();
     })
   }
-  hapusdata(item){
+  ButtonDeleteData(item){
     let id = item.id;
-    this.dataprovinsiservice.hapusdata(id).subscribe(val =>{
+    this.dataprovinsiservice.DeleteData(id).subscribe(val =>{
       alert('data sukses di hapus');
       this.getdata();
     })
   }
-  edit(item){
+  UpdateData(item){
     this.id = item.id;
     this.namaprovinsi = item.namaprovinsi;
   }
