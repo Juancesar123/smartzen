@@ -1,6 +1,7 @@
 import { EService } from './../e.service';
 import { DatakotaService } from './../datakota.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-datakota',

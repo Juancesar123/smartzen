@@ -1,15 +1,15 @@
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
 import { Observable } from "rxjs/Observable";
 import "rxjs/operator/map";
 @Injectable()
 export class EService {
 
-  constructor(public http: HttpClient) {
+  constructor(public http: Http) {
    
    }
-   GetData (){
-    return this.http.get('http://localhost:3030/dataprovinsi');
+   GetData ():Observable<any[]>{
+    return this.http.get('http://localhost:3030/dataprovinsi').map(result => result.json());
   }
   SaveData(data){
     //let body = JSON.stringify(data);

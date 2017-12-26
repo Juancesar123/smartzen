@@ -28,6 +28,7 @@
     "datatables": "^1.10.13",
     "datatables.net": "^1.10.16",
     "datatables.net-dt": "^1.10.16",
+    "indexeddb-angular": "^0.1.8",
     "jquery": "^3.2.1",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"

@@ -45,4 +45,5 @@ id;
     this.id = item.id;
     this.namaprovinsi = item.namaprovinsi;
   }
+  
 }

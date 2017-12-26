@@ -35,7 +35,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button class="btn btn-primary" (click)="simpan()"><i class="fa fa-send"></i>Submit</button>
+                                <button class="btn btn-primary" (click)="ButtonSaveData()"><i class="fa fa-send"></i>Submit</button>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button class="btn btn-primary" (click)="ubahdata()"><i class="fa fa-send"></i>Submit</button>
+                                    <button class="btn btn-primary" (click)="ButtonUpdateData()"><i class="fa fa-send"></i>Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                       <tbody>
                           <tr *ngFor = "let item of dataprovinsi">
                               <td>{{item.namaprovinsi}}</td>
-                              <td><button class="btn btn-success" (click)="edit(item)" data-toggle="modal" data-target="#myModal1"><i class="fa fa-edit"></i> Edit</button> <button class="btn btn-danger" (click)="hapusdata(item)"><i class="fa fa-trash"></i> Hapus</button></td>
+                              <td><button class="btn btn-success" (click)="edit(item)" data-toggle="modal" data-target="#myModal1"><i class="fa fa-edit"></i> Edit</button> <button class="btn btn-danger" (click)="ButtonDeleteData(item)"><i class="fa fa-trash"></i> Hapus</button></td>
                           </tr>
                       </tbody>
                   </table>

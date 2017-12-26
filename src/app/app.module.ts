@@ -1,4 +1,5 @@
 import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -54,7 +55,8 @@ import { IntegratedcctvComponent } from './integratedcctv/integratedcctv.compone
     appRouterModule,
     DataTablesModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    HttpModule
 
 
   ],
